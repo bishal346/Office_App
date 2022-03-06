@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Adding the Posts</h1>
+    <br><br><br><br>
+    <h3>Below departments exists try to add Posts within them</h3> 
+    <ul>
+        {% for l in tup %} 
+            <li>Select {{l[0]}} to add permisible numbers of posts for {{l[1]}} department</li>
+        {% endfor %} 
+    </ul>
+    <form name="passdata" action="/boss/Posts_ADD" method="post">
+        
+        <label>PID : </label> 
+        <input type="number" name="pid" required>
+        <br><br><br><br>
+
+        <label>Seats(totlal people required for this deparment) : </label> 
+        <input type="number" name="seats" required>
+        <br><br><br><br>
+        
+        <input type="submit" value="submit">
+    </form>
+    <h1>{{mg}}</h1>
+</body>
+</html>

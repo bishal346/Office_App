@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            /*margin-top: 90px;
+            border: 3px;*/
+            background-color:rgb(201, 63, 63);
+        }
+        .tot {
+            margin-top: 90px;
+            border-width: 3px ;
+            border-style:  solid;
+            border-color: black;
+            width: 50%;
+            margin-left: 25%;
+        }
+    </style>
+</head>
+<body>
+    <div class = "tot">
+    <h1>Boss's SignIN</h1>
+    <form name="passdata" action="/boss" method="post">
+        <label>email : </label>
+        <input type="text" name="email">
+        <br><br><br><br> 
+        <label>password : </label>     
+        <input type="text" name="password" required> 
+        <br><br><br><br>
+        <input type="submit" value="submit">
+    </form>
+    <a href="/boss_signUP">Not have an account then create one</a>
+    <h2>{{xman}}</h2> 
+    </div>
+    <br><br><br><br>
+    <a href="/boss/DepartmentSection">{{deptwa}}</a>
+    <br><br>
+    <a href="/boss/HolidaySection">{{holwa}}</a>
+    <br><br>
+    <a href="/boss/LoanSection">{{lonwa}}</a> 
+    <br><br>
+    <a href="/boss/SalarySection">{{salwa}}</a>
+    <br><br>
+    <a href="/boss/PostSection">{{postwa}}</a>
+    <br><br>
+    <a href="/boss/View_ALL_Details_PER_DEPARTMENT">{{viewa}}</a> 
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            /*margin-top: 90px;
+            border: 3px;
+            background-color:pink;*/
+            background-image: url("../static/R\ \(2\).jpg");
+        }
+        .tot {
+            margin-top: 90px;
+            border-width: 3px ;
+            border-style:  solid;
+            border-color: black;
+            width: 50%;
+            margin-left: 25%;
+        }
+    </style>
+</head>
+<body class="tot">
+    <h1>Employer's SignUP</h1>
+    <br><br><br><br>
+    <h3>Choose the numbers as per your department</h3> 
+    <ul>
+        {% for l in tpl %} 
+            <li>Select {{l[0]}} if you belong to {{l[1]}} department</li>
+        {% endfor %} 
+    </ul>
+    <form name="passdata" action="/employee_signUP" method="post">
+        <label>departmetID : </label>     
+        <input type="number" name="inst_name" required> 
+        <br><br><br><br>
+        <label>Name : </label> 
+        <input type="text" name="name" required>
+        <br><br><br><br>
+        <label>email : </label>
+        <input type="text" name="email">
+        <br><br><br><br>
+        <label>Adress : </label>     
+        <input type="text" name="adress" required>
+        <br><br><br><br> 
+        <label>password : </label>     
+        <input type="text" name="password" required> 
+        <br><br><br><br>
+        <input type="submit" value="submit">
+    </form>
+    <h1>{{txe}}</h1>
+</body>
+</html>

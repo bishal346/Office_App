@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            /*margin-top: 90px;
+            border: 3px;*/
+            background-color:yellow;
+        }
+        .tot {
+            margin-top: 90px;
+            border-width: 3px ;
+            border-style:  solid;
+            border-color: black;
+            width: 50%;
+            margin-left: 25%;
+        }
+    </style>
+</head>
+<body>
+    <div class = "tot">
+    <h1>View Employeer's details</h1>
+    <form name="passdata" action="/emp/EmployView" method="post">
+        <label>email : </label>
+        <input type="text" name="email">
+        <br><br><br><br>
+        <label>password : </label>     
+        <input type="text" name="password" required> 
+        <br><br><br><br>
+        <input type="submit" value="submit">
+    </form>
+    <br><br>
+    <h1>{{xman}}</h1>
+    </div>
+    <br><br>
+    {% for l in lst %} 
+            <li>
+                <h3>{{l}}</h3>
+            </li>
+    {% endfor %} 
+</body>
+</html>

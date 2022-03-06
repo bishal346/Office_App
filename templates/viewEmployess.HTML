@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        {% for l in tup %} 
+            <li><h1>{{l[1]}}</h1>
+                <h3>Department ID : {{l[0]}}</h3>
+                <h3>Salary Provided : {{l[2]}}</h3>
+                <h3>Holidays Provided(per year) : {{l[3]}}</h3>
+                <h3>Intrest taken in each loan(per year) : {{l[4]}}%</h3>
+                <h3>Total number of seats in this posts : {{l[5]}}</h3>
+            </li>
+        {% endfor %} 
+    </ul>
+</body>
+</html>
